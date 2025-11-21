@@ -11,6 +11,8 @@ public class UnityEventOnTrigger : MonoBehaviour
     
     public UnityEvent onTriggerEnter, onTriggerExit;
 
+    public UnityEvent gameEnded;
+
     private void Awake()
     {
         if ((GetComponent<Collider>() == null) && (GetComponent<Collider2D>() == null))
@@ -54,5 +56,6 @@ public class UnityEventOnTrigger : MonoBehaviour
             onTriggerExit.Invoke();
             Debug.Log("Unity Event Trigger (exit) activated on " + gameObject);
         }
+        
     }
 }
